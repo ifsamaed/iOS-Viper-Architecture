@@ -11,6 +11,7 @@ import UIKit
 class PostListWireFrame: PostListWireFrameProtocol {
     
     class func createPostListModule() -> UIViewController {
+        
         let navController = mainStoryboard.instantiateViewController(withIdentifier: "PostsNavigationController")
         if let view = navController.childViewControllers.first as? PostListView {
             let presenter: PostListPresenterProtocol & PostListInteractorOutputProtocol = PostListPresenter()
